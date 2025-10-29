@@ -1,0 +1,96 @@
+.toTop {
+  width: 4em;
+  height: 4em;
+  color: #2196f3;
+  display: inline-block;
+  position: fixed;
+  bottom: 10px;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  padding-top: 3em;
+
+  outline: none;
+}
+.toTop:focus-visible {
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.35);
+  border-radius: 6px;
+}
+
+.toTop::after {
+  content: 'Вверх';
+  position: absolute;
+  font-size: 14px;
+  left: 8px;
+}
+
+.toTop:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  font-size: 1.9em;
+
+  width: 1.4em;
+  height: 1.4em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  line-height: 1.3em;
+  border-color: inherit;
+  color: inherit;
+
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232196F3' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 14 12 8 18 14'/></svg>")
+    50% 60% / 96% 96% no-repeat;
+
+  transition:
+    transform 0.3s ease-out,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.toTop:hover:before,
+.toTop:focus-visible:before {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' \
+stroke='%23FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'>\
+<polyline points='6 14 12 8 18 14'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 50% 62%;
+  background-size: 102% 102%;
+  transform: translateX(-50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .toTop:before {
+    font-size: 1.4em;
+    top: 10px;
+  }
+  .toTop::after {
+    font-size: 12px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .toTop {
+    left: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .toTop {
+    left: 25px;
+  }
+  .toTop:before {
+    font-size: 1em;
+    top: 22px;
+  }
+
+  .toTop::after {
+    font-size: 8px;
+    left: 16px;
+  }
+}

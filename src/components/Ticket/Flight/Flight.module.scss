@@ -1,0 +1,88 @@
+.flight {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.travelTime {
+  width: 40%;
+}
+
+.routeLength {
+  width: 30%;
+}
+
+.transfers {
+  width: 30%;
+}
+
+.flight h4 {
+  color: #a0b0b9;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.flight span {
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.stopNames {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .travelTime {
+    width: 37%;
+  }
+  .routeLength {
+    width: 28%;
+  }
+  .transfers {
+    width: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .travelTime {
+    width: 40%;
+  }
+  .routeLength {
+    width: 30%;
+  }
+  .transfers {
+    width: 30%;
+  }
+}
+
+@media (max-width: 320px) {
+  .flight {
+    margin-bottom: 12px;
+  }
+
+  .travelTime {
+    width: 35%;
+  }
+  .routeLength {
+    width: 25%;
+  }
+  .transfers {
+    width: 40%;
+  }
+
+  .flight h4 {
+    font-size: 8px;
+    line-height: normal;
+  }
+
+  .flight span {
+    font-size: 8px;
+  }
+}
